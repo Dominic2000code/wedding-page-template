@@ -1,0 +1,16 @@
+{
+  "name": "weddingwebpage",
+  "version": "1.0.0",
+  "description": "```\r A simple static and responsive wep app\r ```",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "Dominic Bluawofogbe",
+  "license": "ISC",
+  "homepage": "https://Dominic2000code.github.io/wedding-page-template",
+  "dependencies": {
+    "gh-pages": "^2.2.0"
+  }
+
+}
