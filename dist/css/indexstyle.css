@@ -1,6 +1,10 @@
-body,h1,h2,h3,h6,p{font-family:cursive }
+body,h1,h2,h3,h6,p{font-family:cursive
+
+}
 body, html {height: 100%}
-p {line-height: 2}
+p {line-height: 2;
+    font-size: large;
+}
 
 *,
 *::before,
@@ -62,8 +66,8 @@ a:hover{
 .btn{
     display: inline-block;
     padding: 0.5em 1.5em;
-    background: grey;
-    color: black;
+    background: black;
+    color: white;
     text-decoration: none;
     cursor: pointer;
     font-size: 0.8rem;
@@ -161,6 +165,7 @@ h2{
 .bgimg2{
     background-image: url(../images/daisy-flowers.jpg);
     background-size: cover;
+    background-attachment: fixed;
     padding: 20%;
     
 }
