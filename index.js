@@ -1,7 +1,11 @@
 const button = document.querySelector(".rsvp-btn");
+const modalBg = document.querySelector(".modal-bg");
+const modalClose = document.querySelector(".modal-close");
 
+button.addEventListener("click", () => {
+	modalBg.classList.add("bg-active");
+});
 
-
-button.addEventListener('click',()=>{
-    document.body.classList.toggle('alert')
-})
+modalClose.addEventListener("click", () => {
+	modalBg.classList.remove("bg-active");
+});
