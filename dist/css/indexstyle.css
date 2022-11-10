@@ -49,8 +49,8 @@ p {
 }
 
 .nav_link:hover {
-	background-color: #000;
-	color: #fff;
+	border-bottom: solid 1px #000;
+	color: rgb(160, 132, 136);
 }
 
 .logo {
@@ -215,7 +215,7 @@ h2 {
 }
 
 .rsvp {
-	background-color: pink;
+	background-color: rgb(236, 213, 216);
 	text-align: center;
 	padding-bottom: 3em;
 	padding-top: 4em;
@@ -270,16 +270,96 @@ h2 {
 	-o-transition: visibility 0s opacity 0.5s;
 }
 
+.inp {
+	position: relative;
+	margin: auto;
+	width: 100%;
+	max-width: 280px;
+	border-radius: 3px;
+	overflow: hidden;
+  }
+  .inp .label {
+	position: absolute;
+	top: 20px;
+	left: 12px;
+	font-size: 16px;
+	color: rgba(0, 0, 0, 0.5);
+	font-weight: 500;
+	transform-origin: 0 0;
+	transform: translate3d(0, 0, 0);
+	transition: all 0.2s ease;
+	pointer-events: none;
+  }
+  .inp .focus-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.05);
+	z-index: -1;
+	transform: scaleX(0);
+	transform-origin: left;
+  }
+  .inp input {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+		 appearance: none;
+	width: 100%;
+	border: 0;
+	font-family: inherit;
+	padding: 16px 12px 0 12px;
+	height: 50px;
+	font-size: 16px;
+	font-weight: 400;
+	background: rgba(0, 0, 0, 0.02);
+	box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+	color: #000;
+	transition: all 0.15s ease;
+  }
+  .inp input:hover {
+	background: rgba(0, 0, 0, 0.04);
+	box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.5);
+  }
+  .inp input:not(:-moz-placeholder-shown) + .label {
+	color: rgba(0, 0, 0, 0.5);
+	transform: translate3d(0, -12px, 0) scale(0.75);
+  }
+  .inp input:not(:-ms-input-placeholder) + .label {
+	color: rgba(0, 0, 0, 0.5);
+	transform: translate3d(0, -12px, 0) scale(0.75);
+  }
+  .inp input:not(:placeholder-shown) + .label {
+	color: rgba(0, 0, 0, 0.5);
+	transform: translate3d(0, -12px, 0) scale(0.75);
+  }
+  .inp input:focus {
+	background: rgba(0, 0, 0, 0.05);
+	outline: none;
+	box-shadow: inset 0 -2px 0 #0077FF;
+  }
+  .inp input:focus + .label {
+	color: #0077FF;
+	transform: translate3d(0, -12px, 0) scale(0.75);
+  }
+  .inp input:focus + .label + .focus-bg {
+	transform: scaleX(1);
+	transition: all 0.1s ease;
+  }
+
+
 .bg-active {
 	visibility: visible;
 	opacity: 1;
 }
 
+
+
 .modal {
 	position: relative;
 	background-color: #d3d3d3;
 	width: 45%;
-	height: 55%;
+	height: 50%;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -297,14 +377,6 @@ h2 {
 	-moz-transform: rotate(45deg);
 	-ms-transform: rotate(45deg);
 	-o-transform: rotate(45deg);
-}
-
-input {
-	/* border-top: 0;
-	border-left: 0;
-	border-right: 0; */
-	width: 50%;
-	height: 30px;
 }
 
 @media (max-width: 600px) {
@@ -372,13 +444,5 @@ input {
 
 	.modal p {
 		font-size: 20px;
-	}
-
-	input {
-		/* border-top: 0;
-	border-left: 0;
-	border-right: 0; */
-		width: 75%;
-		height: 30px;
 	}
 }
